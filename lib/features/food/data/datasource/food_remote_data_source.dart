@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:food_app/core/network/dio_client.dart';
 import '../models/food_model.dart';
 import '../../../../core/error/exceptions.dart';
 

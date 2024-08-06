@@ -2,15 +2,25 @@
 
 A new Flutter project.
 
-## Getting Started
+## Screenshoot
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+# Clean Architecture Structure
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## lib/domain
+- **entities/**: Contains the core business models of the application.
+- **repositories/**: Defines the abstract repository interfaces that will be used by the use cases.
+- **usecases/**: Contains the application-specific business rules or use cases.
+
+## lib/data
+- **datasources/**: Handles data fetching and persistence. This may include remote and local data sources.
+- **repositories/**: Contains the implementation of the repository interfaces defined in the `domain` layer. It interacts with the data sources.
+
+## lib/presentation
+- **blocs/**: Contains the business logic components (BLoCs) that manage state and handle events.
+- **pages/**: Contains the UI screens or pages of the application.
+- **widgets/**: Contains reusable UI components or widgets.
+
+
+
